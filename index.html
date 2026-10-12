@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hotel Menu · Your Language</title>
+  <meta name="description" content="Scan the QR code to read our menu in your own language, with dishes recommended for the taste of your home country.">
+  <meta name="theme-color" content="#7c2d12">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <noscript><p class="noscript">Please enable JavaScript to view the menu.</p></noscript>
+  <div id="app" class="app"><div class="view view-loading"><div class="spinner" aria-hidden="true"></div></div></div>
+
+  <script src="data-menu.js" defer></script>
+  <script src="data-languages.js" defer></script>
+  <script src="data-countries.js" defer></script>
+  <script src="taste.js" defer></script>
+  <script src="translate.js" defer></script>
+  <script src="qrcode.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

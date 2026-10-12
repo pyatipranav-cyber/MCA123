@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Table QR Codes · Staff</title>
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="qr-page">
+  <div class="app">
+    <header class="hero compact no-print">
+      <div class="brand-mark" aria-hidden="true">🖨️</div>
+      <h1>Table QR codes</h1>
+      <p class="hero-sub">Print these and place one on each table. Guests scan with their phone camera or Google Lens — the menu opens in their own language.</p>
+    </header>
+
+    <form id="qr-form" class="qr-controls no-print" autocomplete="off">
+      <label>Menu website address
+        <input id="qr-url" type="url" required maxlength="200" placeholder="https://your-menu.vercel.app">
+      </label>
+      <label>First table number
+        <input id="qr-from" type="number" min="0" max="999" value="1">
+      </label>
+      <label>Last table number
+        <input id="qr-to" type="number" min="0" max="999" value="8">
+      </label>
+      <div class="toolbar">
+        <button class="btn" type="submit">Generate</button>
+        <button class="btn ghost" type="button" id="qr-print">Print</button>
+      </div>
+    </form>
+    <p class="muted small no-print">Leave both table numbers empty to make a single QR code without a table number. Maximum 100 codes at a time.</p>
+    <p id="qr-msg" class="qr-error no-print" role="alert"></p>
+
+    <section id="qr-sheet" class="qr-sheet" aria-live="polite"></section>
+  </div>
+
+  <script src="data-menu.js" defer></script>
+  <script src="qrcode.js" defer></script>
+  <script src="qr.js" defer></script>
+</body>
+</html>
